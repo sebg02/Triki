@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>TRIKI</title>
+  </head>
+  <body>
+    <div class="game">
+      <h1>TRIKI</h1>
+      <div class="game_btns">
+        <button class="game_player-vs-player">Jugador vs Jugador</button>
+        <button class="game_player-vs-machine">Jugador vs Máquina</button>
+      </div>
+      <div class="game_board hidden">
+        <div class="game_container">
+          <div class="game_cell" data-index="0"></div>
+          <div class="game_cell" data-index="1"></div>
+          <div class="game_cell" data-index="2"></div>
+          <div class="game_cell" data-index="3"></div>
+          <div class="game_cell" data-index="4"></div>
+          <div class="game_cell" data-index="5"></div>
+          <div class="game_cell" data-index="6"></div>
+          <div class="game_cell" data-index="7"></div>
+          <div class="game_cell" data-index="8"></div>
+        </div>
+      </div>
+
+      <p class="game_message"></p>
+
+      <div class="game_puntajePartida hidden">
+        <div class="game_jugador1">
+          <h3 class="game_jugador">Jugador</h3>
+          <p class="game_marcador1" id="puntajeJug1">0</p>
+        </div>
+        <div class="game_jugador3">
+          <h3 class="game_empateh">Empate</h3>
+          <p class="game_empate" id="puntajeEmpate">0</p>
+        </div>
+        <div class="game_jugador2">
+          <h3 class="game_maquina">Máquina</h3>
+          <p class="game_marcador2" id="puntajeJug2">0</p>
+        </div>
+      </div>
+
+      <div class="game_nextMatch hidden">
+        <button id="nextMatchBtn">Siguiente partida</button>
+      </div>
+      <div class="game_reiniciar hidden">
+        <button id="game_btnReiniciarPartida">Reiniciar partida</button>
+      </div>
+      <div class="game_reiniciarPuntajes hidden">
+        <button id="resetScoreboardBtn">Reiniciar puntajes</button>
+      </div>
+    </div>
+    <div class="nombres hidden">
+      <div class="nombres_registro">
+        <h2>Registro de jugadores:</h2>
+        <form class="nombres_form">
+          <input type="text" class="nombres_jugador1" autocomplete="off" placeholder="Nombre jugador 1..." required />
+          <input type="text" class="nombres_jugador2" autocomplete="off" placeholder="Nombre jugador 2..." required />
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+    </div>
+
+    <hr />
+    <footer>
+      <div>
+        <p>Hecho por:</p>
+        <br />
+        <ul>
+          <li><i>Sebastián Gil Rueda</i></li>
+          <li><i>Juan Diego Varón Solorzano</i></li>
+          <li><i>Elkin Torres</i></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
