@@ -99,7 +99,7 @@ function handleCellClick(event) {
     event.target.innerHTML = blurOrRed(currentPlayer);
     if (checkWinner()) {
       registrarGanador(currentPlayer, currentGameId);
-      gameMessage.textContent = `El jugador ${changenames(currentPlayer)} ha ganado!`;
+      gameMessage.textContent = `${changenames(currentPlayer)} ha ganado!`;
       allGameCell.forEach((cell) => {
         cell.removeEventListener("click", handleCellClick);
       });
@@ -139,7 +139,6 @@ function maquinaJuega() {
   }, 600);
 }
 
-//
 function blurOrRed(letter) {
   if (letter == "X") {
     return `<span style="color:red;"> X <span>`;
@@ -148,7 +147,7 @@ function blurOrRed(letter) {
   }
 }
 
-// Reiniciar partida actual
+// Resetea el tablero
 function clearBoard() {
   board = Array(9).fill(null);
   allGameCell.forEach((cell) => {
